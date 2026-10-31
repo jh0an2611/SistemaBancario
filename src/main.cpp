@@ -11,8 +11,50 @@
 //   make entrega arma el .zip para subir al Campus
 
 #include <iostream>
+#include "Cliente.h"
 
+using namespace std;
+
+int Menu(){
+    int op;
+    cout << "=====SISTEMA BANCARIO=====" <<endl
+              <<"1. Añadir cliente. "<< endl
+              <<endl <<"Seleccione una opcion: ";
+    cin >> op;
+    return op;
+}
+
+Cliente CrearCliente(){
+    string nombre;
+    string identificacion;
+    string telefono;
+    std::cout << "Ingrese el nombre del cliente: ";
+    getline(cin, nombre);
+    cout << endl << "Ingrese un numero de identificación: ";
+    cin >> identificacion;
+    cout << "Ingrese un numero de telefono: ";
+    cin >> telefono;
+
+    Cliente c(identificacion, nombre, telefono);
+    return c;
+}
 int main() {
-    std::cout << "Sistema bancario" << std::endl;
+    int op;
+    do{
+        op = Menu();
+        switch (op)
+        {
+        case 1:
+            {
+                Cliente c = CrearCliente();
+                break;
+            }
+        case 8:
+            cout << "Saliendo del sistema, gracias por usar.";
+            break;
+        default:
+            cout << "Opcion invalida, vuelva intentar.";
+        } 
+    }while(op!=8);
     return 0;
 }
