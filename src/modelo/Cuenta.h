@@ -15,6 +15,5 @@ class Cuenta {
         void setSaldo(long saldo);
         void retirarDinero(long cantidad);
         void consignarDinero(long cantidad);
-        void mostrarInformacion();
 };
 #endif

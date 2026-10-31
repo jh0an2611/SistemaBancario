@@ -18,18 +18,20 @@ void Cuenta::retirarDinero(long cantidad){
     if (cantidad <= saldo){
         saldo -= cantidad;
         cout << "Se ha retirado con exito " << cantidad << "COP de su cuenta." << endl;
-    } else if (cantidad > saldo){
+        cout << "Saldo: " << saldo << endl;
+    } else{
         cout << "No hay suficiente dinero en su cuenta para retirar." << endl;
+        cout << "Saldo: " << saldo << endl;
     }
 }
 
 void Cuenta::consignarDinero(long cantidad){
     if (cantidad > 0){
         saldo += cantidad;
+        cout << "Saldo: " << saldo << endl;
+    } else {
+        cout << "No se puede consignar dinero negativo ni nulo."<< endl;
+        cout << "Saldo: " << saldo << endl; 
     }
 }
 
-void Cuenta::mostrarInformacion(){
-    cout << "id: " << id << endl;
-    cout << "saldo: " << saldo << endl;
-}
