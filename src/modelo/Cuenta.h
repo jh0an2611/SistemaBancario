@@ -13,7 +13,7 @@ class Cuenta {
         Cuenta(string id_, long saldo_);
         string getNumeroCuenta()const; 
         void setSaldo(long saldo);
-        void retirarDinero(long cantidad);
+        bool retirarDinero(long cantidad);
         void consignarDinero(long cantidad);
 };
 #endif

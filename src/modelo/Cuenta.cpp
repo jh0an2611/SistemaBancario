@@ -14,15 +14,14 @@ void Cuenta::setSaldo(long saldo){
     this->saldo = saldo; 
 }
 
-void Cuenta::retirarDinero(long cantidad){
-    if (cantidad <= saldo){
-        saldo -= cantidad;
-        cout << "Se ha retirado con exito " << cantidad << "COP de su cuenta." << endl;
-        cout << "Saldo: " << saldo << endl;
-    } else{
-        cout << "No hay suficiente dinero en su cuenta para retirar." << endl;
-        cout << "Saldo: " << saldo << endl;
+bool Cuenta::retirarDinero(long cantidad){
+    if (cantidad <= 0 || cantidad > saldo){
+        return false;
     }
+
+    saldo -= cantidad;
+    cout << "Saldo actualizado: " << endl; 
+    return true;
 }
 
 void Cuenta::consignarDinero(long cantidad){
