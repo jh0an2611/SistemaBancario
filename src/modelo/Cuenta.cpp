@@ -9,10 +9,17 @@ Cuenta::Cuenta(string id_, long saldo_):id(id_), saldo(saldo_){}
 string Cuenta::getNumeroCuenta()const{
     return id;
 }
+long Cuenta::getSaldo()const{
+    return saldo;
+}
 
+void Cuenta::setNumeroCuenta(string id){
+    this->id = id; 
+}
 void Cuenta::setSaldo(long saldo){
     this->saldo = saldo; 
 }
+
 
 bool Cuenta::retirarDinero(long cantidad){
     if (cantidad <= 0 || cantidad > saldo){

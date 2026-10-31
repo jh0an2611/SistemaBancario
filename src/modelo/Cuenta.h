@@ -12,6 +12,8 @@ class Cuenta {
     public:
         Cuenta(string id_, long saldo_);
         string getNumeroCuenta()const; 
+        long getSaldo()const;
+        void setNumeroCuenta(string id);
         void setSaldo(long saldo);
         bool retirarDinero(long cantidad);
         void consignarDinero(long cantidad);
