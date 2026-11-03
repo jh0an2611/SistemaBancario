@@ -49,11 +49,17 @@ void Banco::calcularPromedio() {
         return;
     }
     long suma{};
+    int cuentasValidas{};
     for (const Titularidad& t : titulares) {
         Cuenta* cuenta = t.getCuenta();
         if (cuenta != nullptr) { // confirmo que cuenta no sea puntero nulo
             suma += cuenta->getSaldo();
+            cuentasValidas++;
         }
     }
-    cout << "Promedio de saldos: " << suma / titulares.size() << endl;
+    if (cuentasValidas == 0) {
+        cout << "No hay cuentas con saldo registrado." << endl;
+        return;
+    }
+    cout << "Promedio de saldos: " << static_cast<double>(suma) / cuentasValidas << endl;
 }
