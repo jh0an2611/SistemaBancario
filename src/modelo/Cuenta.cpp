@@ -27,7 +27,7 @@ bool Cuenta::retirarDinero(long cantidad){
     }
 
     saldo -= cantidad;
-    cout << "Saldo actualizado: " << endl; 
+    cout << "Saldo actualizado: " << saldo << endl; 
     return true;
 }
 
