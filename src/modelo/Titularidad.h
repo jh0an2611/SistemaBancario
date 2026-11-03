@@ -17,8 +17,8 @@ class Titularidad{
         Titularidad(Cliente *cliente_, Cuenta *cuenta_, string tipo, string fecha);
         string getTipoTitular()const;
         string getFechaVinculacion()const;
-        Cliente getCliente()const;
-        Cuenta getCuenta()const;
+        Cliente* getCliente()const;
+        Cuenta* getCuenta()const;
 };
 
 #endif

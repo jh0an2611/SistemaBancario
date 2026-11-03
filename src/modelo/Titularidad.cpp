@@ -9,9 +9,9 @@ string Titularidad::getTipoTitular()const{
 string Titularidad::getFechaVinculacion()const{
     return fechaVinculacion;
 }
-Cliente Titularidad::getCliente()const{
-    return *cliente;
+Cliente* Titularidad::getCliente()const{
+    return cliente;
 }
-Cuenta Titularidad::getCuenta()const{
-    return *cuenta;
+Cuenta* Titularidad::getCuenta()const{
+    return cuenta;
 }
