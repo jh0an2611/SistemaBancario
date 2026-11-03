@@ -23,6 +23,7 @@ void Cuenta::setSaldo(long saldo){
 
 bool Cuenta::retirarDinero(long cantidad){
     if (cantidad <= 0 || cantidad > saldo){
+        cout << "Error: No se puede retirar esa cantidad de dinero." << endl;
         return false;
     }
 
