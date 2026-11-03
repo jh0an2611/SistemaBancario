@@ -11,10 +11,10 @@ class Titularidad{
         int idTitularidad;
         string tipoTitular;
         string fechaVinculacion;
-        Cliente cliente;
-        Cuenta cuenta;
+        Cliente* cliente;
+        Cuenta* cuenta;
     public:
-        Titularidad(Cliente cliente_, Cuenta cuenta_, string tipo, string fecha);
+        Titularidad(Cliente *cliente_, Cuenta *cuenta_, string tipo, string fecha);
         string getTipoTitular()const;
         string getFechaVinculacion()const;
         Cliente getCliente()const;
