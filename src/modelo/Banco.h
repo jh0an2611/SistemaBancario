@@ -13,7 +13,7 @@ class Banco {
         Banco(string nombre_);
         string getNombre()const;
         void addTitularidad(Titularidad t);
-        void addTitularidadReferencia(Titularidad t);
+        void addTitularidadReferencia(Titularidad& t);
         void imprimirDatos();
         void calcularPromedio();
 };
